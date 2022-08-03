@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(90deg, rgb(2, 77, 72),rgb(193, 204, 202));
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock {
+    width: 17rem;
+    height: 17rem;
+    border: 15px solid rgb(32, 121, 72);
+    border-radius: 50%;
+    padding: 2rem;
+    box-shadow: 0 0 0 4px rgba(94, 189, 17, 0.1), inset 0 0 0 3px #435232,
+      inset 0 0 10px rgb(77, 151, 65), 0 0 10px rgba(98, 133, 68, 0.2);
+}
+.clock-face {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+.hand {
+    width: 50%;
+    height: 6px;
+    background: rgb(68, 124, 63);
+    position: absolute;
+    top: 50%;
+    border-radius: 5px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.07s;
+    transition-timing-function: cubic-bezier(0, 2, 1, 1);
+}
+.hourHand {
+    z-index: 1;
+    width: 25%;
+    left: 25%;
+}
+.minHand {
+    z-index: 2;
+}
+.secondHand {
+    z-index: 3;
+    background: rgb(69, 144, 62);
+    height: 0.3rem;
+} 
+.center {
+    width: .9rem;
+    height: .9rem;
+    border-radius: 50%;
+    z-index: 4;
+    background: rgb(68, 124, 63);
+    position: absolute;
+    /* border: 1px solid rgb(2, 77, 72); */
+    top: 47%;
+    left: 46%;
+}
+.no-transition {
+    transition: none !important;
+} 
+.digital{
+    font-size: 2rem;
+    text-align: center;
+    position: fixed;
+    left: 30%;
+    bottom: 18%;
+    color: rgb(2, 56, 12);
+
+    
+}
+p{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+    font-size: 20px;
+}
+a{
+    color: rgb(2, 77, 72);
+}
